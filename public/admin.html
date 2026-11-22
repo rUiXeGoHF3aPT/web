@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Visitor log · Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <nav class="nav"><a class="wordmark" href="./"><span class="mark">●</span> YOUR SPACE</a><span class="nav-note">PRIVATE / ADMIN</span></nav>
+    <header class="dash-header"><span class="eyebrow">VISITOR ACTIVITY</span><h1>Visitor log<span class="accent">.</span></h1><p>Review recent visits to your site.</p></header>
+    <section id="login" class="card login-card"><h2>Sign in</h2><p>Enter your admin token to see the log.</p><form id="login-form"><label for="token">ADMIN TOKEN</label><div class="login-row"><input id="token" type="password" autocomplete="off" required placeholder="Paste your token"><button class="button" type="submit">UNLOCK <span>↗</span></button></div></form></section>
+    <section id="logs" class="card" hidden><div class="card-header"><div><span class="eyebrow">LATEST FIRST</span><h2>Recent visits</h2></div><div class="actions"><button id="refresh" class="secondary">Refresh</button><button id="logout" class="secondary">Sign out</button></div></div><div class="table-wrap"><table><thead><tr><th>TIME (UTC)</th><th>IP ADDRESS</th><th>PAGE</th></tr></thead><tbody id="rows"></tbody></table></div><p id="empty" hidden>No visits yet.</p><button id="more" class="secondary" hidden>Load more</button></section>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
